@@ -26,7 +26,7 @@ void setup() {
 void loop() {
   sensorValue = analogRead(analogInPin);
   maxSpeedValue = map(sensorValue, 0, 1023, 50, 8000);
-  accelerationValue = map(sensorValue, 0, 1023, 10, 800);
+  accelerationValue = map(sensorValue, 0, 1023, 50, 8000);
   
   stepper.setMaxSpeed(maxSpeedValue);
   stepper.setAcceleration(accelerationValue);
